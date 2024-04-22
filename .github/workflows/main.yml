@@ -18,5 +18,5 @@ jobs:
         with:
           server: ftp.vitasoftsolutions.com
           username: vistock@vistock.vitasoftsolutions.com
-          password: ${{ secrets.FTP_PASSWORD }} # Use GitHub secrets for sensitive data
+          password: U70v(5gHHRo1;p
           server-dir: /home/vitasoft/vistock.vitasoftsolutions.com/vistock
