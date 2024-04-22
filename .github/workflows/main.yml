@@ -2,7 +2,6 @@ on:
   push:
   branches:
     - main
-name: index
 jobs:
   web-deploy:
     name: deploy
