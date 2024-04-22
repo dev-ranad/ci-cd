@@ -7,8 +7,8 @@ jobs:
   web-deploy:
     name: deploy
     runs-on: ubuntu-latest
-    setps:
-      - name: get latest code
+    steps:
+      - name: Get latest code
         uses: actions/checkout@2.3.2
       - name: sync files
         uses: SamKirklan/FTP-Deploy-Action@4.0.0
