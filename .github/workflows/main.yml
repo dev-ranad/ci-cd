@@ -1,18 +1,22 @@
+name: Deploy to FTP
+
 on:
   push:
-  branches:
-    - main
+    branches:
+      - main
+
 jobs:
   web-deploy:
-    name: deploy
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Get the latest code
-        uses: actions/checkout@2.3.2
-      - name: sync files
-        uses: SamKirklan/FTP-Deploy-Action@4.0.0
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Deploy code via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ftp.vitasoftsolutions.com
           username: vistock@vistock.vitasoftsolutions.com
-          password: U70v(5gHHRo1;p
+          password: ${{ secrets.FTP_PASSWORD }} # Use GitHub secrets for sensitive data
           server-dir: /home/vitasoft/vistock.vitasoftsolutions.com/vistock
