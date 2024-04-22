@@ -1,0 +1,19 @@
+'on':
+  push: null
+  branches:
+    - main
+name: index
+jobs:
+  web-deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    setps:
+      - name: get latest code
+        uses: actions/checkout@2.3.2
+      - name: sync files
+        uses: SamKirklan/FTP-Deploy-Action@4.0.0
+        with:
+          server: ftp.vitasoftsolutions.com
+          username: vistock@vistock.vitasoftsolutions.com
+          password: U70v(5gHHRo1;p
+          server-dir: /home/vitasoft/vistock.vitasoftsolutions.com/vistock
