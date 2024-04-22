@@ -19,4 +19,4 @@ jobs:
           server: ftp.vitasoftsolutions.com
           username: vistock@vistock.vitasoftsolutions.com
           password: U70v(5gHHRo1;p
-          server-dir: /home/vitasoft/vistock.vitasoftsolutions.com/vistock
+          server-dir: /home/vitasoft/vistock.vitasoftsolutions.com/vistock/
